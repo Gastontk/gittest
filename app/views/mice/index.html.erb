@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mice</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>New</th>
+      <th>Edit</th>
+      <th>Create</th>
+      <th>Index</th>
+      <th>Destroy</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mice.each do |mouse| %>
+      <tr>
+        <td><%= mouse.new %></td>
+        <td><%= mouse.edit %></td>
+        <td><%= mouse.create %></td>
+        <td><%= mouse.index %></td>
+        <td><%= mouse.destroy %></td>
+        <td><%= link_to 'Show', mouse %></td>
+        <td><%= link_to 'Edit', edit_mouse_path(mouse) %></td>
+        <td><%= link_to 'Destroy', mouse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mouse', new_mouse_path %>

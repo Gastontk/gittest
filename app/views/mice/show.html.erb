@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>New:</strong>
+  <%= @mouse.new %>
+</p>
+
+<p>
+  <strong>Edit:</strong>
+  <%= @mouse.edit %>
+</p>
+
+<p>
+  <strong>Create:</strong>
+  <%= @mouse.create %>
+</p>
+
+<p>
+  <strong>Index:</strong>
+  <%= @mouse.index %>
+</p>
+
+<p>
+  <strong>Destroy:</strong>
+  <%= @mouse.destroy %>
+</p>
+
+<%= link_to 'Edit', edit_mouse_path(@mouse) %> |
+<%= link_to 'Back', mice_path %>
